@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Recetas Comida</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Recipes</h1>
+        <div>
+            <form>
+                <div>
+                    <select id="categorias" class="form-select">
+                        <option disabled selected value="">-- Seleccione Categoría --</option>
+                        <option value="1">Breakfast Recipes</option>
+                        <option value="2">Snacks Recipes</option>
+                        <option value="3">Beef Recipes</option>
+                        <option value="4">Pork & Other Red meat</option>
+                        <option value="8">Desserts Recipes</option>
+                        <option value="11">Drinks & Smoothies</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div id="resultado" class="">
+            <div hidden id="spinner"></div>
+        </div>
+
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
