@@ -7,12 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador Recetas Comida</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
-    <main>
-        <h1>Recipes</h1>
-        <div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="index.html">Recipes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid">
+        <h1 class="text-center m-5">Buscador de Recetas Keto</h1>
+        <div class="container mx-auto">
+            <form id="register" >
+                <div class="divLogin mb-3">
+                    <input id="name" type="text" placeholder="Introduce tu nombre" />
+                    <button class="btn btn-primary" type="submit"> Login </button>
+                </div>
+            </form>
+            <div class="divLogout mt-2 mb-3">
+                <h2 class="welcome">  </h2>
+                <button class="btn btn-danger btn-logout d-none ms-3" type="submit"> </button>    
+            </div>
             <form>
                 <div>
                     <select id="categorias" class="form-select">
@@ -27,12 +55,32 @@
                 </div>
             </form>
         </div>
-        <div id="resultado" class="">
-            <div hidden id="spinner"></div>
-        </div>
 
+        <div hidden id="spinner" class="position-absolute top-100 start-50 translate-middle"></div>
+        <section>
+            <div class="result-card mt-3 d-flex justify-content-center"> </div>
+            <div id="resultado" class="mt-5"> </div>
+            
+                <!-- modal bootstrap -->
+            <div class="modal fade" id="modal" data-bs-backdrop="boolean" data-bs-keyboard="false" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title fs-5 font-bold" id="staticBackdropLabel"></h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer flex justify-content-between"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 
